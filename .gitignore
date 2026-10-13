@@ -1,0 +1,7 @@
+config/database.local.php
+config/whatsapp.local.php
+.env
+vendor/
+storage/logs/*.log
+.vscode/
+Thumbs.db

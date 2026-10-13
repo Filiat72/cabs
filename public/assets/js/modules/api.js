@@ -1,0 +1,1 @@
+// Purpose: communication with the booking enquiry API.

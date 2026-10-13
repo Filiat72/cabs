@@ -1,0 +1,1 @@
+-- Purpose: create the notification outbox table.
