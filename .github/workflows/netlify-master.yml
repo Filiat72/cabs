@@ -26,9 +26,7 @@ jobs:
         run: npm run build:netlify
 
       - name: Publish to Netlify
-        uses: netlify/actions/cli@v5
-        with:
-          args: deploy --prod --dir=build/netlify
+        run: npx --yes netlify-cli deploy --prod --dir=build/netlify
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
