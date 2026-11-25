@@ -1,11 +1,9 @@
-# Deploy from GitHub branch "master" (repo has no "main").
-# Add repo secrets: NETLIFY_AUTH_TOKEN, NETLIFY_SITE_ID
-# Netlify UI must set Production branch to "master" OR rely on this workflow only.
+# Optional: manual deploy via CLI (after creating a new Netlify site).
+# For normal deploys use Netlify → Import Git → github.com/Filiat72/cabs, branch master.
+# Secrets (new site): NETLIFY_AUTH_TOKEN, NETLIFY_SITE_ID
 name: Netlify deploy (master)
 
 on:
-  push:
-    branches: [master]
   workflow_dispatch:
 
 jobs:

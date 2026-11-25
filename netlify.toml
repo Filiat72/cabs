@@ -1,3 +1,4 @@
+# GitHub: https://github.com/Filiat72/cabs — production branch: master
 # Production branch is NOT read from this file — only in Netlify UI:
 # Site configuration → Build & deploy → Branches and deploy contexts
 # → Production branch = "master" (this repo does not use "main").
