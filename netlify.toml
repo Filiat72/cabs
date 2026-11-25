@@ -1,0 +1,19 @@
+# IMPORTANT: In Netlify → Site configuration → Build & deploy → Branches,
+# set Production branch to "master" (this repo has no "main" branch).
+
+[build]
+  command = "npm run build:netlify"
+  publish = "build/netlify"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
