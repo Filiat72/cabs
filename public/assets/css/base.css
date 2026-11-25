@@ -1,0 +1,39 @@
+/* Global typography and sizing baseline */
+:root {
+    --bkc-text-base: 1rem;
+    --bkc-text-sm: 0.875rem;
+    --bkc-text-xs: 0.8125rem;
+    --bkc-text-lg: 1.125rem;
+    --bkc-heading-xl: 1.75rem;
+    --bkc-hero-title: clamp(45px, 4.5vw, 51px);
+    --bkc-hero-eyebrow: 17px;
+    --bkc-hero-lead: 19px;
+    --bkc-hero-benefit: 16px;
+    --bkc-hero-icon: 40px;
+    --bkc-hero-mob-width: 941;
+    --bkc-hero-mob-height: 1672;
+    --bkc-hero-mob-ratio: calc(var(--bkc-hero-mob-height) / var(--bkc-hero-mob-width));
+    --bkc-heading-lg: 1.375rem;
+    --bkc-heading-md: 1.0625rem;
+    --bkc-icon-box: 1.625rem;
+    --bkc-icon-box-lg: 2rem;
+    --bkc-header-height: 4.5rem;
+    --bkc-header-shell-padding: 14px;
+    --bkc-header-offset: calc(
+        var(--bkc-header-shell-padding) + var(--bkc-header-height) + 10px
+    );
+    --bkc-header-radius: 16px;
+    --bkc-logo-size: 72px;
+    --bkc-nav-font: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+    --bkc-text-base: 0.9375rem;
+}
+
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-size: var(--bkc-text-base);
+    line-height: 1.5;
+}

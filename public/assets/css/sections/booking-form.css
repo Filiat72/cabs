@@ -1,1 +1,351 @@
-/* Purpose: styles for the booking enquiry form. */
+/* =========================================
+   BANU KABI CABS - BOOKING FORM
+========================================= */
+
+.booking-section {
+    position: relative;
+    z-index: 5;
+    padding: 0 24px 48px;
+    margin-top: -30px;
+    background: linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 62px,
+        #f5f5f5 62px,
+        #f5f5f5 100%
+    );
+    color: #171717;
+}
+
+.booking-container {
+    position: relative;
+    width: min(1360px, 100%);
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Tabs */
+
+.booking-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    overflow: hidden;
+    background: #191919;
+}
+
+.booking-tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 52px;
+    padding: 12px;
+    border: 0;
+    border-right: 1px solid #353535;
+    background: #191919;
+    color: #fff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.booking-tab:last-child {
+    border-right: 0;
+}
+
+.booking-tab:hover {
+    color: #ffcc18;
+}
+
+.booking-tab.active {
+    background: #ffcc18;
+    color: #111;
+}
+
+.booking-tab span {
+    font-size: 1.125rem;
+    line-height: 1;
+}
+
+/* Form panels */
+
+.booking-panel {
+    padding: 24px 20px 20px;
+    background: #fff;
+}
+
+.booking-panel[hidden] {
+    display: none !important;
+}
+
+.ride-form {
+    width: 100%;
+    margin: 0;
+}
+
+.booking-fields {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.booking-fields input,
+.booking-fields select {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    min-height: 50px;
+    padding: 12px 15px;
+    border: 1px solid #e2e2e2;
+    border-radius: 8px;
+    outline: none;
+    background: #fff;
+    color: #222;
+    font-family: inherit;
+    font-size: 15px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.booking-fields input::placeholder {
+    color: #858585;
+}
+
+.booking-fields input:focus,
+.booking-fields select:focus {
+    border-color: #ffcc18;
+    box-shadow: 0 0 0 3px rgba(255, 204, 24, 0.18);
+}
+
+.rental-fields {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* Vehicle heading */
+
+.vehicle-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px dashed #dedede;
+}
+
+.vehicle-heading strong {
+    font-size: 18px;
+    font-weight: 750;
+}
+
+.vehicle-heading > span {
+    color: #858585;
+    font-size: 14px;
+}
+
+/* Vehicle options */
+
+.vehicle-booking-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 230px;
+    align-items: stretch;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.vehicle-options {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.vehicle-option {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    min-width: 0;
+    min-height: 112px;
+    padding: 8px;
+    border: 1px solid #e5e5e5;
+    border-radius: 9px;
+    background: #fffaf0;
+    color: #111;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.vehicle-option:has(input:checked) {
+    border-color: #ffcc18;
+    background: #ffcc18;
+}
+
+.vehicle-option input[type="radio"] {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    accent-color: #111;
+    cursor: pointer;
+}
+
+.vehicle-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    font-size: 1.75rem;
+}
+
+.vehicle-option strong {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+/* Book button */
+
+.book-ride-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    gap: 12px;
+    width: 100%;
+    min-height: 48px;
+    padding: 12px 16px;
+    border: 0;
+    border-radius: 8px;
+    background: #ffcc18;
+    color: #111;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.book-ride-button:hover {
+    background: #f2bd00;
+}
+
+.book-ride-button:active {
+    transform: translateY(1px);
+}
+
+.book-ride-button span {
+    font-size: 1.125rem;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+    .booking-section {
+        margin-top: -38px;
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .booking-fields {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .vehicle-booking-row {
+        grid-template-columns: 1fr;
+    }
+
+    .book-ride-button {
+        justify-self: end;
+        max-width: 280px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .booking-section {
+        margin-top: -22px;
+        padding: 0 10px 28px;
+        background: #f5f5f5;
+    }
+
+    .booking-container {
+        border-radius: 12px;
+    }
+
+    .booking-tab {
+        min-height: 54px;
+        gap: 5px;
+        padding: 10px 4px;
+        font-size: 13px;
+    }
+
+    .booking-tab span {
+        font-size: 17px;
+    }
+
+    .booking-panel {
+        padding: 16px 12px;
+    }
+
+    .booking-fields,
+    .rental-fields {
+        grid-template-columns: 1fr;
+        gap: 9px;
+    }
+
+    .vehicle-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .vehicle-heading strong {
+        font-size: 16px;
+    }
+
+    .vehicle-options {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .vehicle-option {
+        min-height: 100px;
+    }
+
+    .vehicle-placeholder {
+        min-height: 55px;
+        font-size: 1.5rem;
+    }
+
+    .book-ride-button {
+        max-width: none;
+        min-height: 56px;
+        font-size: 17px;
+    }
+}
+/* Actual vehicle images */
+.vehicle-image {
+    display: block;
+    width: 100%;
+    max-width: 190px;
+    height: 52px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.vehicle-option {
+    overflow: hidden;
+}
+
+.vehicle-option strong {
+    position: relative;
+    z-index: 1;
+}

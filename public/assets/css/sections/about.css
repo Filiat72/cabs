@@ -1,1 +1,371 @@
 /* Purpose: styles for the about section. */
+
+
+/* =========================================
+   ABOUT BANU KABI CABS
+========================================= */
+
+.about-section {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    padding: 65px 4.5%;
+    overflow: hidden;
+    background-color: #fffaf0;
+
+    /* Full-section background image */
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.48),
+            rgba(255, 250, 235, 0.25)
+        ),
+        url("../../images/about/about-background.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about-container {
+    width: 100%;
+    max-width: 1740px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 38px;
+}
+
+/* LEFT SIDE */
+
+.about-content {
+    min-width: 0;
+}
+
+.about-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 20px;
+
+    color: #111111;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.about-eyebrow-line {
+    display: inline-block;
+    flex-shrink: 0;
+    width: 36px;
+    height: 3px;
+    background: #ffb900;
+}
+
+.about-heading {
+    margin: 0 0 22px;
+    color: #080b12;
+    font-size: var(--bkc-heading-lg, clamp(22px, 2.5vw, 28px));
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+}
+
+.about-heading span,
+.about-choose-heading h3 span {
+    color: #f5a400;
+}
+
+.about-description {
+    max-width: 850px;
+    margin: 0 0 28px;
+
+    color: #43516d;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* FOUR BENEFITS */
+
+.about-benefits {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: start;
+    margin-top: 28px;
+}
+
+.about-benefit {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.about-benefit:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    right: 0;
+    width: 1px;
+    height: 75px;
+    background: rgba(82, 98, 126, 0.35);
+}
+
+.about-benefit-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+    margin-bottom: 10px;
+
+    border-radius: 50%;
+    background: rgba(255, 199, 48, 0.36);
+}
+
+.about-symbol {
+    color: #080808;
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.about-benefit p {
+    margin: 0;
+    color: #101010;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* RIGHT SIDE PANEL */
+
+.about-choose {
+    min-width: 0;
+    padding: 25px 26px;
+
+    border: 1px solid rgba(255, 190, 35, 0.65);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.60);
+    backdrop-filter: blur(3px);
+}
+
+.about-choose-heading {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin: 0 5px 18px;
+}
+
+.about-choose-heading h3 {
+    margin: 0;
+    color: #101010;
+    font-size: 18px;
+    font-weight: 850;
+    line-height: 1.25;
+}
+
+/* FOUR CHOOSE-US CARDS */
+
+.about-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.about-choose-card {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    min-width: 0;
+    min-height: 103px;
+    padding: 14px 16px;
+
+    border: 1px solid rgba(255, 194, 51, 0.58);
+    border-radius: 19px;
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.about-choose-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+    background: rgba(255, 198, 43, 0.48);
+
+    color: #090909;
+    font-size: 1.125rem;
+    font-weight: 800;
+}
+
+.about-choose-text {
+    min-width: 0;
+}
+
+.about-choose-text h4 {
+    margin: 0 0 6px;
+    color: #111111;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.about-choose-text p {
+    margin: 0;
+    color: #394761;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+    .about-section {
+        padding: 55px 4%;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-heading {
+        font-size: clamp(22px, 4vw, 28px);
+    }
+
+    .about-description {
+        max-width: 900px;
+    }
+
+    .about-choose-heading h3 {
+        font-size: 27px;
+    }
+
+    .about-choose-text h4 {
+        font-size: 18px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .about-section {
+        padding: 42px 18px;
+        background-position: center;
+    }
+
+    .about-container {
+        gap: 30px;
+    }
+
+    .about-eyebrow {
+        gap: 12px;
+        margin-bottom: 16px;
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    .about-eyebrow-line {
+        width: 35px;
+    }
+
+    .about-heading {
+        margin-bottom: 17px;
+        font-size: clamp(22px, 6vw, 28px);
+        letter-spacing: -1.2px;
+    }
+
+    .about-description {
+        margin-bottom: 22px;
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .about-benefits {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 24px;
+    }
+
+    .about-benefit {
+        padding: 0 5px;
+    }
+
+    .about-benefit:nth-child(2)::after {
+        display: none;
+    }
+
+    .about-benefit:not(:last-child)::after {
+        height: 65px;
+    }
+
+    .about-benefit-icon {
+        width: 62px;
+        height: 62px;
+    }
+
+    .about-symbol {
+        font-size: 29px;
+    }
+
+    .about-benefit p {
+        font-size: 14px;
+    }
+
+    .about-choose {
+        padding: 20px 14px;
+        border-radius: 16px;
+    }
+
+    .about-choose-heading {
+        align-items: flex-start;
+        gap: 11px;
+        margin: 0 0 17px;
+    }
+
+    .about-choose-heading .about-eyebrow-line {
+        margin-top: 11px;
+    }
+
+    .about-choose-heading h3 {
+        font-size: 21px;
+    }
+
+    .about-choose-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .about-choose-card {
+        min-height: 88px;
+        gap: 14px;
+        padding: 12px;
+        border-radius: 14px;
+    }
+
+    .about-choose-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 27px;
+    }
+
+    .about-choose-text h4 {
+        font-size: 16px;
+    }
+
+    .about-choose-text p {
+        font-size: 13px;
+    }
+}
+/* Align About Us navigation exactly at the top */
+#about {
+    scroll-margin-top: 0;
+}

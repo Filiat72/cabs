@@ -1,0 +1,332 @@
+/**
+ * Compact typography — loaded last to normalize text and icon scale site-wide.
+ */
+
+:root {
+    --bkc-heading-xl: 1.75rem;
+    --bkc-heading-lg: 1.375rem;
+    --bkc-heading-md: 1.0625rem;
+    --bkc-text-base: 0.9375rem;
+    --bkc-icon-box: 1.625rem;
+    --bkc-logo-size: 72px;
+    --bkc-header-height: 4.5rem;
+}
+
+body {
+    font-size: var(--bkc-text-base);
+}
+
+/* Header — keep compact nav text; layout from main.css */
+.nav-link {
+    font-size: 0.8125rem !important;
+    font-family: var(--bkc-nav-font) !important;
+    color: #ffffff !important;
+}
+
+.primary-navigation .nav-link:hover {
+    color: var(--bkc-yellow, #ffcc18) !important;
+}
+
+.primary-navigation .nav-link.active {
+    color: var(--bkc-yellow, #ffcc18) !important;
+    font-weight: 700 !important;
+}
+
+.header-phone {
+    font-size: 0.8125rem !important;
+    font-family: var(--bkc-nav-font) !important;
+}
+
+.brand-logo img {
+    width: var(--bkc-logo-size, 72px) !important;
+    height: var(--bkc-logo-size, 72px) !important;
+}
+
+.phone-icon {
+    font-size: 0.875rem !important;
+}
+
+/* Hero — standard marketing scale (other sections stay compact) */
+.hero-eyebrow {
+    font-size: var(--bkc-hero-eyebrow, 17px) !important;
+    letter-spacing: 0.08em;
+    line-height: 1.4 !important;
+}
+
+.hero-content h1 {
+    font-size: var(--bkc-hero-title, clamp(45px, 4.5vw, 51px)) !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.03em !important;
+}
+
+.hero-description {
+    font-size: var(--bkc-hero-lead, 19px) !important;
+}
+
+.hero-benefit {
+    font-size: var(--bkc-hero-benefit, 16px) !important;
+}
+
+.hero-section .benefit-icon,
+.hero-benefits .benefit-icon {
+    width: var(--bkc-hero-icon, 40px) !important;
+    height: var(--bkc-hero-icon, 40px) !important;
+    flex: 0 0 var(--bkc-hero-icon, 40px) !important;
+    font-size: 1.25rem !important;
+    border-radius: 8px !important;
+}
+
+.hero-section {
+    min-height: calc(520px + var(--bkc-header-offset, 96px));
+}
+
+.hero-container {
+    min-height: 520px;
+}
+
+/* Section titles */
+.services-heading h2,
+.fleet-heading h2,
+.tariff-heading h2,
+.about-heading,
+.footer-brand-text h2,
+.footer-title h2 {
+    font-size: var(--bkc-heading-lg) !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em !important;
+}
+
+.services-eyebrow,
+.fleet-eyebrow,
+.tariff-eyebrow,
+.about-eyebrow {
+    font-size: 0.6875rem !important;
+    letter-spacing: 0.12em;
+}
+
+.services-heading > p,
+.fleet-heading p,
+.tariff-subtitle,
+.about-description,
+.footer-description {
+    font-size: 0.875rem !important;
+    line-height: 1.5 !important;
+}
+
+/* Tariff panels */
+.tariff-panel-heading {
+    min-width: 0;
+    padding: 6px 16px 6px 6px;
+}
+
+.tariff-panel-heading h3 {
+    font-size: 0.875rem !important;
+    font-weight: 800 !important;
+}
+
+.tariff-panel-icon {
+    width: 2rem !important;
+    height: 2rem !important;
+    flex: 0 0 2rem !important;
+    border-width: 3px !important;
+    font-size: 0.875rem !important;
+}
+
+.tariff-section .benefit-icon {
+    width: 1.625rem !important;
+    height: 1.625rem !important;
+    flex: 0 0 1.625rem !important;
+    font-size: 0.6875rem !important;
+}
+
+.tariff-benefit {
+    font-size: 0.6875rem !important;
+}
+
+.tariff-policy {
+    font-size: 0.8125rem !important;
+}
+
+.tariff-car-info h4 {
+    font-size: 0.875rem !important;
+}
+
+.tariff-car-pricing > div:first-child strong {
+    font-size: 0.9375rem !important;
+}
+
+/* About */
+.about-choose-heading h3 {
+    font-size: 1rem !important;
+}
+
+.about-benefit-icon,
+.about-choose-icon {
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+    font-size: 0.875rem !important;
+}
+
+.about-symbol {
+    font-size: 0.875rem !important;
+}
+
+.about-benefit span,
+.about-choose-text h4,
+.about-choose-text strong {
+    font-size: 0.8125rem !important;
+}
+
+.about-choose-text p {
+    font-size: 0.75rem !important;
+}
+
+.about-benefit > span:last-child {
+    font-size: 0.75rem !important;
+}
+
+/* Fleet cards */
+.fleet-card h3 {
+    font-size: 0.9375rem !important;
+}
+
+.fleet-details .fleet-stat-value {
+    font-size: 0.875rem !important;
+}
+
+.fleet-controls button,
+.fleet-section button[data-fleet-prev],
+.fleet-section button[data-fleet-next] {
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+    font-size: 1rem !important;
+}
+
+/* Services cards */
+.service-number {
+    font-size: 0.75rem !important;
+    min-width: 1.75rem !important;
+    min-height: 1.5rem !important;
+}
+
+.service-card h3 {
+    font-size: 0.9375rem !important;
+}
+
+.service-card p {
+    font-size: 0.8125rem !important;
+}
+
+/* Booking form */
+.booking-tab {
+    font-size: 0.8125rem !important;
+    min-height: 2.75rem !important;
+}
+
+.booking-tab span {
+    font-size: 0.9375rem !important;
+}
+
+.vehicle-placeholder {
+    font-size: 1.25rem !important;
+    min-height: 2.5rem !important;
+}
+
+.book-ride-button {
+    font-size: 0.875rem !important;
+    min-height: 2.75rem !important;
+}
+
+.book-ride-button span {
+    font-size: 1rem !important;
+}
+
+/* Footer */
+.footer-logo {
+    width: 3.5rem !important;
+    height: 3.5rem !important;
+}
+
+.footer-brand-text p {
+    font-size: 0.625rem !important;
+    letter-spacing: 0.15em !important;
+}
+
+.footer-links li a {
+    font-size: 0.875rem !important;
+    gap: 0.75rem !important;
+}
+
+.footer-chevron {
+    font-size: 0.875rem !important;
+}
+
+.footer-social-link {
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+}
+
+.footer-social-link svg {
+    width: 1rem !important;
+    height: 1rem !important;
+}
+
+.footer-contact-icon {
+    width: 2.25rem !important;
+    height: 2.25rem !important;
+}
+
+.footer-contact-icon svg {
+    width: 1rem !important;
+    height: 1rem !important;
+}
+
+.footer-contact-label {
+    font-size: 0.75rem !important;
+}
+
+.footer-contact-text strong {
+    font-size: 0.875rem !important;
+}
+
+.footer-bottom p {
+    font-size: 0.8125rem !important;
+}
+
+@media (max-width: 760px) {
+    .hero-eyebrow {
+        font-size: 12px !important;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(26px, 6.5vw, 32px) !important;
+        line-height: 1.15 !important;
+    }
+
+    .hero-description {
+        font-size: 14px !important;
+    }
+
+    .hero-benefit {
+        font-size: 11px !important;
+    }
+
+    .hero-content,
+    .hero-eyebrow,
+    .hero-content h1,
+    .hero-description {
+        text-align: center !important;
+    }
+
+    .hero-section .benefit-icon,
+    .hero-benefits .benefit-icon {
+        width: 30px !important;
+        height: 30px !important;
+        flex: 0 0 30px !important;
+        font-size: 0.75rem !important;
+    }
+
+    .hero-container {
+        min-height: 0 !important;
+    }
+}

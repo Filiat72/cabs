@@ -1,1 +1,659 @@
 /* Purpose: styles for the tariff section. */
+
+
+/* ==========================================
+   BANU KABI CABS — OUR TARIFF
+   ========================================== */
+
+.tariff-section,
+.tariff-section * {
+    box-sizing: border-box;
+}
+
+
+.tariff-section {
+    position: relative;
+    width: 100%;
+    padding: 20px 20px 18px;
+    overflow: hidden;
+    color: #111827;
+    background:
+        radial-gradient(circle at 0% 0%, rgba(255, 193, 7, 0.20), transparent 22%),
+        radial-gradient(circle at 100% 0%, rgba(255, 193, 7, 0.15), transparent 22%),
+        linear-gradient(180deg, #fffefa 0%, #fff8e8 100%);
+}
+
+/* Heading */
+
+.tariff-heading {
+    max-width: 1100px;
+    margin: 0 auto 16px;
+    text-align: center;
+}
+
+.tariff-eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 8px;
+    color: #111827;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+.tariff-eyebrow::before,
+.tariff-eyebrow::after {
+    content: "";
+    display: block;
+    width: 58px;
+    height: 2px;
+    background: #ffad00;
+}
+
+.tariff-heading h2 {
+    margin: 0 0 4px;
+    color: #111827;
+    font-size: var(--bkc-heading-lg, clamp(22px, 2.5vw, 28px));
+    font-weight: 850;
+    line-height: 1.05;
+    letter-spacing: -1px;
+}
+
+.tariff-heading h2 span {
+    color: #f5a000;
+}
+
+.tariff-subtitle {
+    margin: 0;
+    color: #475569;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* Trust indicators */
+
+.tariff-benefits {  
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin: 12px auto 0;
+}
+
+.tariff-benefit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 44px;
+    padding: 0 26px;
+    color: #172033;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.tariff-benefit + .tariff-benefit {
+    border-left: 1px solid #d6dbe3;
+}
+
+.tariff-section .benefit-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+    color: #f5a000;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* Two panels */
+
+.tariff-panels {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 24px;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.tariff-panel {
+    min-width: 0;
+    padding: 14px;
+    overflow: hidden;
+    border: 1px solid #ffdf83;
+    border-radius: 16px;
+    background-color: #fff7dc;
+    background-image:
+        linear-gradient(
+            180deg,
+            rgba(255, 249, 226, 0.55),
+            rgba(255, 245, 212, 0.88)
+        ),
+        url("../../images/services/tariff-background.png");
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 8px 22px rgba(126, 93, 12, 0.07);
+}
+
+/* Panel title */
+
+.tariff-panel-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: fit-content;
+    max-width: 100%;
+    min-width: 270px;
+    margin: 0 0 10px 8px;
+    padding: 8px 30px 8px 8px;
+    border-radius: 50px 12px 12px 50px;
+    background: linear-gradient(110deg, #ffca12, #ffb900);
+    color: #080808;
+}
+
+.tariff-panel-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    border: 4px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    background: #ffffff;
+    color: #111827;
+    font-size: 1.125rem;
+    font-weight: 800;
+    line-height: 1;
+    box-shadow: 0 3px 8px rgba(107, 71, 0, 0.18);
+}
+
+.tariff-panel-heading h3 {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 850;
+    line-height: 1.2;
+}
+
+/* Trip rules */
+
+.tariff-policy {
+    margin: 0 8px 12px;
+    color: #111827;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.tariff-policy p {
+    margin: 0;
+}
+
+.tariff-policy p + p {
+    margin-top: 1px;
+}
+
+/* Vehicle list */
+
+.tariff-vehicles {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tariff-car {
+    display: grid;
+    grid-template-columns: minmax(120px, 0.85fr) minmax(0, 1.5fr) auto;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 3px 12px rgba(100, 75, 18, 0.035);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.tariff-car:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(100, 75, 18, 0.09);
+}
+
+.tariff-car-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 110px;
+}
+
+.tariff-car-image img {
+    display: block;
+    width: 100%;
+    max-width: 230px;
+    height: 120px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.tariff-car-info {
+    min-width: 0;
+}
+
+.tariff-car-info h4 {
+    margin: 0 0 2px;
+    color: #111827;
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+.tariff-car-type {
+    margin: 0 0 4px;
+    color: #475569;
+    font-size: 13px;
+}
+
+.tariff-capacity {
+    margin: 0 0 8px;
+    color: #111827;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+/* Pricing details */
+
+.tariff-car-pricing {
+    display: grid;
+    grid-template-columns: 0.8fr 0.9fr 1.4fr;
+    gap: 0;
+    padding-top: 8px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.tariff-car-pricing > div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+    padding: 0 9px;
+}
+
+.tariff-car-pricing > div:first-child {
+    padding-left: 0;
+}
+
+.tariff-car-pricing > div + div {
+    border-left: 1px solid #dbe1e8;
+}
+
+.tariff-car-pricing span {
+    color: #64748b;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.tariff-car-pricing strong {
+    overflow-wrap: anywhere;
+    color: #111827;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.tariff-car-pricing > div:first-child strong {
+    color: #f2a000;
+    font-size: 16px;
+}
+
+/* Book Now button */
+
+.tariff-book-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    align-self: start;
+    min-width: 118px;
+    padding: 12px 14px;
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(110deg, #ffca12, #ffb900);
+    color: #111111;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 3px 8px rgba(173, 117, 0, 0.10);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.tariff-book-button span {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.tariff-book-button:hover {
+    transform: translateY(-2px);
+    background: #ffda4a;
+}
+
+.tariff-book-button:focus-visible {
+    outline: 3px solid #111827;
+    outline-offset: 3px;
+}
+
+/* Laptop and smaller desktop */
+
+@media (max-width: 1250px) {
+    .tariff-section {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .tariff-panels {
+        gap: 16px;
+    }
+
+    .tariff-panel {
+        padding: 10px;
+    }
+
+    .tariff-car {
+        grid-template-columns: minmax(100px, 0.8fr) minmax(0, 1.5fr);
+        gap: 10px;
+    }
+
+    .tariff-car-image {
+        grid-row: span 2;
+    }
+
+    .tariff-book-button {
+        grid-column: 2;
+        justify-self: start;
+        margin-top: 2px;
+    }
+
+    .tariff-car-pricing {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* Compact tariff layout for laptop screens */
+@media (min-width: 901px) {
+    .tariff-panel {
+        padding: 10px;
+    }
+
+    .tariff-panel-heading {
+        margin-bottom: 6px;
+    }
+
+    .tariff-panel-icon {
+        width: 46px;
+        height: 38px;
+        flex-basis: 38px;
+        font-size: 1rem;
+    }
+
+    .tariff-policy {
+        margin-bottom: 8px;
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .tariff-vehicles {
+        gap: 8px;
+    }
+
+    .tariff-car {
+        padding: 8px;
+        gap: 10px;
+        border-radius: 12px;
+    }
+
+    .tariff-car-image {
+        min-height: 80px;
+    }
+
+    .tariff-car-image img {
+        height: 85px;
+    }
+
+    .tariff-car-info h4 {
+        font-size: 15px;
+        line-height: 1.2;
+    }
+
+    .tariff-car-type {
+        font-size: 12px;
+    }
+
+    .tariff-capacity {
+        margin-bottom: 5px;
+        font-size: 13px;
+    }
+
+    .tariff-car-pricing {
+        padding-top: 5px;
+    }
+
+    .tariff-car-pricing span {
+        font-size: 10px;
+    }
+
+    .tariff-car-pricing strong {
+        font-size: 12px;
+    }
+
+    .tariff-car-pricing > div:first-child strong {
+        font-size: 18px;
+    }
+
+    .tariff-book-button {
+        min-width: 100px;
+        padding: 9px 10px;
+        font-size: 12px;
+    }
+}
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .tariff-section {
+        padding: 40px 16px 32px;
+    }
+
+    .tariff-panels {
+        grid-template-columns: 1fr;
+        max-width: 760px;
+        gap: 22px;
+    }
+
+    .tariff-benefit {
+        padding: 8px 16px;
+    }
+
+    .tariff-panel {
+        padding: 14px;
+    }
+
+    .tariff-car {
+        grid-template-columns: minmax(130px, 0.8fr) minmax(0, 1.5fr) auto;
+    }
+
+    .tariff-car-image {
+        grid-row: auto;
+    }
+
+    .tariff-book-button {
+        grid-column: auto;
+        justify-self: auto;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 560px) {
+    .tariff-section {
+        padding: 32px 10px 26px;
+    }
+
+    .tariff-heading {
+        margin-bottom: 22px;
+    }
+
+    .tariff-eyebrow {
+        font-size: 13px;
+         letter-spacing: 3px;
+        }
+
+    .tariff-heading h2 {
+        font-size: clamp(22px, 6vw, 28px);
+        letter-spacing: 1.05;
+    }
+
+    .tariff-subtitle {
+        font-size: 14px;
+    }
+
+    .tariff-benefits {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 18px;
+    }
+
+    .tariff-benefit {
+        justify-content: flex-start;
+        gap: 8px;
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .tariff-benefit + .tariff-benefit {
+        border-left: 0;
+    }
+
+    .tariff-section .benefit-icon {
+        width: 28px;
+        height: 28px;
+        flex-basis: 28px;
+        font-size: 0.875rem;
+    }
+
+    .tariff-panel {
+        padding: 10px;
+        border-radius: 12px;
+    }
+
+    .tariff-panel-heading {
+        min-width: 0;
+        gap: 10px;
+        padding: 6px 18px 6px 6px;
+    }
+
+    .tariff-panel-icon {
+        width: 36px;
+        height: 36px;
+        flex-basis: 36px;
+        font-size: 1rem;
+    }
+
+    .tariff-panel-heading h3 {
+        font-size: 16px;
+    }
+
+    .tariff-policy {
+        margin: 0 3px 12px;
+        font-size: 13px;
+    }
+
+    .tariff-vehicles {
+        gap: 10px;
+    }
+
+    .tariff-car {
+        grid-template-columns: 92px minmax(0, 1fr);
+        gap: 10px;
+        padding: 10px;
+        border-radius: 12px;
+    }
+
+    .tariff-car-image {
+        grid-row: 1 / span 2;
+        min-height: 90px;
+    }
+
+    .tariff-car-image img {
+        height: 90px;
+    }
+
+    .tariff-car-info h4 {
+        font-size: 15px;
+    }
+
+    .tariff-car-type {
+        font-size: 12px;
+    }
+
+    .tariff-capacity {
+        font-size: 13px;
+    }
+
+    .tariff-car-pricing {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .tariff-car-pricing > div {
+        padding: 0 5px;
+    }
+
+    .tariff-car-pricing span {
+        font-size: 9px;
+    }
+
+    .tariff-car-pricing strong {
+        font-size: 11px;
+    }
+
+    .tariff-car-pricing > div:first-child strong {
+        font-size: 17px;
+    }
+
+    .tariff-book-button {
+        grid-column: 2;
+        justify-self: start;
+        min-width: 110px;
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    .tariff-car,
+    .tariff-book-button {
+        transition: none;
+    }
+}
+/* Black symbols inside yellow tariff benefit boxes */
+.benefit-icon {
+    color: #111111 !important;
+    background-color: #ffc107;
+}
+
+/* Keep the symbols black */
+.tariff-benefits .benefit-icon {
+    -webkit-text-fill-color: #111111;
+}

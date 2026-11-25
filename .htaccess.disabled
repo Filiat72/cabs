@@ -1,0 +1,8 @@
+
+# Block direct web access to the project root.
+Require all denied
+
+
+# Important: This does not fix the error by itself. We need to stop applying that restriction to the public directory while continuing to protect private project files.
+# The cleanest solution is to configure Apache to serve public as the website's document root, rather than expose the project root. We should do that after confirming your current Apache 
+# virtual-host configuration.

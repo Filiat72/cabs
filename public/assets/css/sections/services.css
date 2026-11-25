@@ -1,1 +1,259 @@
+
 /* Purpose: styles for the services section. */
+
+/* =========================================
+   BANU KABI CABS - OUR SERVICES
+========================================= */
+
+.services-section {
+    position: relative;
+    isolation: isolate;
+    padding: 38px 0 42px;
+    overflow: hidden;
+    background-color: #fffdf6;
+    background-image: url("../../images/services/services-background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #111;
+}
+
+.services-container {
+    position: relative;
+    z-index: 1;
+    width: min(1750px, calc(100% - 100px));
+    margin: 0 auto;
+}
+
+/* Section heading */
+
+.services-heading {
+    margin-bottom: 28px;
+}
+
+.services-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.services-heading-line {
+    display: inline-block;
+    width: 32px;
+    height: 3px;
+    background: #ffbd08;
+}
+
+.services-heading h2 {
+    margin: 0;
+    color: #111;
+    font-size: var(--bkc-heading-lg, clamp(22px, 2.5vw, 28px));
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+}
+
+.services-heading h2 span {
+    color: #ffb900;
+}
+
+.services-heading > p {
+    margin: 8px 0 0;
+    color: #606060;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Five service cards */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.service-card {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    min-height: 240px;
+    padding: 18px 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 190, 25, 0.25);
+    border-radius: 18px;
+    background-color: rgba(255, 253, 246, 0.8);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-shadow: 0 8px 20px rgba(125, 92, 20, 0.08);
+}
+
+/* Individual card backgrounds */
+
+.service-one-way {
+    background-image: url("../../images/services/one-way-taxi.png");
+}
+
+.service-round-trip {
+    background-image: url("../../images/services/round-trip.png");
+}
+
+.service-local-rental {
+    background-image: url("../../images/services/local-rental.png");
+}
+
+.service-airport {
+    background-image: url("../../images/services/airport-pickup.png");
+}
+
+.service-corporate {
+    background-image: url("../../images/services/corporate-travel.png");
+}
+
+/* Card number */
+
+.service-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    min-height: 28px;
+    padding: 2px 8px;
+    border-radius: 24px;
+    background: rgba(255, 193, 7, 0.22);
+    color: #f5ae00;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+/* Card title */
+
+.service-card h3 {
+    position: relative;
+    z-index: 1;
+    margin: 10px 0 5px;
+    color: #111;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+/* Card description */
+
+.service-card p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    color: #606060;
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+    .services-container {
+        width: calc(100% - 48px);
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .service-card {
+        min-height: 240px;
+        padding: 20px;
+    }
+
+    .services-heading h2 {
+        font-size: clamp(22px, 4vw, 28px);
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+    .services-section {
+        padding: 35px 0 40px;
+    }
+
+    .services-container {
+        width: calc(100% - 32px);
+    }
+
+    .services-heading {
+        margin-bottom: 24px;
+    }
+
+    .services-eyebrow {
+        gap: 10px;
+        margin-bottom: 8px;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .services-heading-line {
+        width: 32px;
+        height: 3px;
+    }
+
+    .services-heading h2 {
+        font-size: clamp(22px, 6vw, 28px);
+        letter-spacing: -1px;
+    }
+
+    .services-heading > p {
+        font-size: 15px;
+        line-height: 1.45;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .service-card {
+        min-height: 260px;
+        padding: 14px;
+        border-radius: 15px;
+    }
+
+    .service-number {
+        min-width: 36px;
+        min-height: 30px;
+        font-size: 18px;
+    }
+
+    .service-card h3 {
+        margin-top: 9px;
+        font-size: 17px;
+    }
+
+    .service-card p {
+        font-size: 13px;
+    }
+}
+
+/* Small mobile screens */
+
+@media (max-width: 380px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        min-height: 280px;
+    }
+}
