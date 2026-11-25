@@ -1,0 +1,7 @@
+{
+  "name": "banu-kabi-cabs",
+  "private": true,
+  "scripts": {
+    "build": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build.ps1"
+  }
+}
