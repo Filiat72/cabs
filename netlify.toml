@@ -2,7 +2,7 @@
 # set Production branch to "master" (this repo has no "main" branch).
 
 [build]
-  command = "npm run build:netlify"
+  command = "mise install && npm run build:netlify"
   publish = "build/netlify"
 
 [build.environment]
