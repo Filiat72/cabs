@@ -16,10 +16,6 @@ jobs:
         with:
           node-version: "20"
 
-      - uses: shivammathur/setup-php@v2
-        with:
-          php-version: "8.2"
-
       - name: Build static site
         run: npm run build:netlify
 
