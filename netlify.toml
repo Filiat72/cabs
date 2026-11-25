@@ -1,5 +1,6 @@
-# IMPORTANT: In Netlify → Site configuration → Build & deploy → Branches,
-# set Production branch to "master" (this repo has no "main" branch).
+# Production branch is NOT read from this file — only in Netlify UI:
+# Site configuration → Build & deploy → Branches and deploy contexts
+# → Production branch = "master" (this repo does not use "main").
 
 [build]
   command = "mise install && npm run build:netlify"
