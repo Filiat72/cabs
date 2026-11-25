@@ -294,8 +294,17 @@ body {
 }
 
 @media (max-width: 760px) {
+    .hero-section {
+        min-height: calc(
+            var(--bkc-header-offset, 96px) + clamp(288px, 76vw, 360px)
+        ) !important;
+        padding-bottom: clamp(20px, 5vw, 32px) !important;
+    }
+
     .hero-eyebrow {
-        font-size: 12px !important;
+        font-size: 10px !important;
+        letter-spacing: 0.05em !important;
+        line-height: 1.3 !important;
     }
 
     .hero-content h1 {

@@ -10,8 +10,8 @@
         <div class="hero-content">
 
             <p class="hero-eyebrow">
-                YOUR JOURNEY<br>
-                OUR RESPONSIBILITY
+                Your journey<br>
+                Our responsibility
             </p>
 
             <h1>

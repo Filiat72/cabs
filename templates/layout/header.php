@@ -17,7 +17,7 @@ $phoneNumber = '+91 9876543210';
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Base typography (load first) -->
-    <?php $assetVersion = '20260326u'; ?>
+    <?php $assetVersion = '20260326y'; ?>
     <link rel="stylesheet" href="assets/css/base.css?v=<?php echo $assetVersion; ?>">
     <!-- Main website stylesheet -->
     <link rel="stylesheet" href="assets/css/main.css?v=<?php echo $assetVersion; ?>">
